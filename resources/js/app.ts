@@ -1,6 +1,7 @@
-import './bootstrap';
-import '../css/app.css';
-import { createApp } from 'vue';
-import App from './components/App.vue';
+import { createApp } from 'vue'
+import router from './router'
+import App from './home/App.vue'
 
-createApp(App).mount('#app');
+const app = createApp(App)
+app.use(router) // ← this registers <router-view> and <router-link>
+app.mount('#app')
